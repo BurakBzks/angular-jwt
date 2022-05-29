@@ -25,10 +25,12 @@ export class LoginComponent implements OnInit {
     if (form.valid) {
       this.http
         .post<AuthenticatedResponse>(
-          'https://localhost:5001/api/Auth/login',
+          'https://localhost:5001/api/login',
           this.credentials,
           {
-            headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+            headers: new HttpHeaders({ 'Content-Type': 'application/json'
+            
+          }),
           }
         )
         .subscribe({
